@@ -1,0 +1,86 @@
+body {
+    background: linear-gradient(135deg, rgb(27, 27, 27), rgb(50, 50, 50)); 
+    color: white;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+a {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-decoration: none; 
+    transition: color 0.3s ease-in-out; 
+    text-align: center; 
+    display: block; 
+    margin: 20px auto; 
+    width: fit-content; 
+}
+
+a:hover {
+    color: rgb(0, 200, 255); 
+}
+
+.clock-container {
+    background-color: rgb(27, 27, 27);
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 800px;
+    height: 450px;
+    align-items: center;
+    margin-top: 25px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); 
+    animation: pulse 2s infinite; 
+}
+
+.clock-container:hover {
+    transform: scale(1.05); 
+    transition: transform 0.3s ease-in-out;
+}
+
+.clock-container p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150px;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5); 
+    transition: all 0.3s ease-in-out; 
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    }
+}
+
+@media (max-width: 768px) {
+    .clock-container {
+        width: 350px;
+        height: auto; 
+    }
+
+    .clock-container p {
+        font-size: 85px; 
+    }
+
+    h1 {
+        font-size: 40px; 
+    }
+}
+
